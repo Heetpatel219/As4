@@ -232,11 +232,29 @@
         "img_url": "https://cdn.rebrickable.com/media/sets/030-2.jpg"
     },
     {
-        "set_num": "03093-1",
-        "name": "The Race to Build It Board Game",
+        "set_num": "3640",
+        "name": "Princess Castle",
         "year": "1999",
         "theme_id": "674",
         "num_parts": "77",
-        "img_url": "https://cdn.rebrickable.com/media/sets/03093-1.jpg"
+        "img_url": "https://cdn.rebrickable.com/media/thumbs/sets/43180-1/63776.jpg/1000x800p.jpg?1653726401.0250072"
+    },
+
+    {
+        "set_num": "3639",
+        "name": "Dark Forest",
+        "year": "1999",
+        "theme_id": "674",
+        "num_parts": "77",
+        "img_url": "https://cdn.rebrickable.com/media/thumbs/sets/76432-1/133007.jpg/1000x800p.jpg?1701440601.34437"
+    },
+    
+    {
+        "set_num": "3638",
+        "name": "Expecto Charm",
+        "year": "1999",
+        "theme_id": "674",
+        "num_parts": "77",
+        "img_url": "https://cdn.rebrickable.com/media/thumbs/sets/76414-1/129935.jpg/1000x800p.jpg?1700526582.4562242"
     }
 ]
