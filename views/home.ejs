@@ -2,57 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Its Legostastic</title>
-    <link rel="stylesheet" href="/css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lego Collection</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
 </head>
 
-<body>
-    <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="text-white text-2xl font-bold">Legos</a>
-            <div class="flex items-center">
-                <a href="about.html" class="text-white mx-4">About</a>
-                <div class="dropdown dropdown-end">
-                    <button class="btn">Theme</button>
-                    <ul class="shadow menu dropdown-content bg-base-100 w-52">
-                        <li><a href="/lego/sets?theme=technic">Technic</a></li>
-                        <li><a href="/lego/sets?theme=classic%20town">Classic Town</a></li>
-                        <li><a href="/lego/sets?theme=supplemental">Supplemental</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    
-    <div class="container mx-auto my-8">
-        <div class="hero p-8 bg-primary text-white">
-            <h1 class="text-4xl font-bold mb-4">Embark on a Journey through the World of Lego Creations</h1>
-            <p class="text-lg mb-4">Discover the magic of building and creativity with our diverse Lego collection. From iconic sets to imaginative creations, explore the endless possibilities that Lego has to offer.</p>
-            <a href="/lego/sets" class="btn">Start Your Lego Adventure</a>
-        </div>
+<body tabindex="-1">
+   <!-- Include navbar partial -->
+   <%- include('partials/navbar', { page: '/home' }) %>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a class="btn btn-ghost normal-case text-xl" href="/"></a>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            <div class="card bg-base-100 p-4 rounded-lg shadow-lg">
-                <img src="https://cdn.rebrickable.com/media/thumbs/sets/76414-1/129935.jpg/1000x800p.jpg?1700526582.4562242" alt="Building Set Image" class="rounded-md mb-4" style="width: 50%; height: auto;">
-                <h2 class="text-xl font-bold mb-2">Expectonum charm with harry potter.</h2>
-                <p class="text-sm mb-2">Step into the enchanting world of Harry Potter with this intricately detailed Lego set, capturing the essence of Dumbledore's office at Hogwarts.</p>
-                <a href="/lego/sets/set_num" class="btn">View Set</a>
-            </div>
-            <div class="card bg-base-100 p-4 rounded-lg shadow-lg">
-                <img src="https://cdn.rebrickable.com/media/thumbs/sets/76432-1/133007.jpg/1000x800p.jpg?1701440601.34437" alt="Building Set Image" class="rounded-md mb-4" style="width: 50%; height: auto;">
-                <h2 class="text-xl font-bold mb-2">Harry and Hermione in Dark Forest.</h2>
-                <p class="text-sm mb-2">Immerse yourself in the epic journey in dark forest with Harry and Hermione in magical world of Hogwarts.</p>
-                <a href="/lego/sets/set_num_2" class="btn">View Set</a>
-            </div>
-            <div class="card bg-base-100 p-4 rounded-lg shadow-lg">
-                <img src="https://cdn.rebrickable.com/media/thumbs/sets/43180-1/63776.jpg/1000x800p.jpg?1653726401.0250072" alt="Lego Set Image" class="rounded-md mb-4" style="width: 50%; height: auto;">
-                <h2 class="text-xl font-bold mb-2">Princess Castle</h2>
-                <p class="text-sm mb-2">Get your princess and beast with thier castle. Includes many accessory.</p>
-                <a href="/lego/sets/set_num_3" class="btn">View Set</a>
-            </div>
+    <div class="dropdown">
+      <label tabindex="0" class="btn btn-ghost sm:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>
+              Theme
+            </summary>
+            <ul class="p-2 bg-base-100">
+              <li><a href="/lego/sets?theme=technic">Technic</a></li>
+              <li><a href="/lego/sets?theme=classic town">Classic Town</a></li>
+              <li><a href="/lego/sets?theme=supplemental">Supplemental</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+
+    <div class="navbar-center hidden sm:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="/about">About</a></li>
+        <li>
+          <details>
+            <summary>Theme</summary>
+            <ul class="p-2 bg-base-100 right-0">
+              <li><a href="/lego/sets?theme=technic">Technic</a></li>
+              <li><a href="/lego/sets?theme=classic town">Classic Town</a></li>
+              <li><a href="/lego/sets?theme=supplemental">Supplemental</a></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="container mx-auto">
+
+
+    <div class="hero bg-base-200 rounded-lg p-6">
+      <div class="hero-content text-center ">
+        <div class="max-w-md">
+          <h1 class="text-5xl font-bold">Explore The World Of Legos</h1>
+
+          <p class="py-6" style="color: rgb(24, 44, 62);">From Fantastical Castles to Galactic Adventures: Let LEGO Spark Your Creativity</p>
+
+      
+          <a href="/lego/sets" class="btn btn-primary">Let's ROLL !!</a>
         </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img class="w-full" src="https://cdn.rebrickable.com/media/sets/001-1.jpg" alt="Lego set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Gears</h2>
+            <p>This set was released in America (USA/CAN) by Samsonite in 1965.</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/001-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img class="w-full" src="https://cdn.rebrickable.com/media/sets/028-1.jpg" alt="Lego Set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Nursery Furniture</h2>
+            <p>Classic Duplo set - create a nursery for your minis.</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/028-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure>
+            <img class="w-full" src="https://cdn.rebrickable.com/media/sets/03093-1.jpg" alt="Lego Set" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">The Race to Build It Board Game</h2>
+            <p>Classic game - released in 1999</p>
+            <div class="card-actions justify-end">
+              <a href="/lego/sets/03093-1" class="btn btn-primary">View</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
 </body>
 
